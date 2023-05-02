@@ -1,0 +1,95 @@
+a {
+    cursor: pointer;
+}
+
+* {
+    clear: both;
+}
+
+:root {
+    --menu-background: #1e90ff;
+    --menu-text: #ffffff;
+    --menu-border: yellow;
+}
+
+ul {
+    padding-inline-start: 0 !important;
+}
+
+.menu-container {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+    position: relative;
+    background-color: var(--menu-background);
+}
+
+.menu-item {
+    display: flex;
+    border-right: 1px solid lightgrey;
+    padding: 10px;
+    transition: all 0.2s linear;
+    border-bottom: 5px solid transparent;
+    cursor: pointer;
+    color: var(--menu-text);
+}
+
+.menu-item:last-child {
+    border-right: none !important;
+}
+
+.menu-item-sub-item {
+    display: inline-block;
+    padding: 10px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    color: black;
+    height: 50px;
+}
+
+.menu-item:hover {
+    border-bottom: 5px solid var(--menu-border) !important;
+}
+
+.menu-item-sub {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 1000px;
+    min-height: 200px;
+    z-index: 9;
+    border-radius: 5px;
+    background: white;
+    margin: 0 auto;
+}
+
+.menu-item.has-sub {
+    list-style: none;
+}
+
+.menu-item.has-sub:hover>.menu-item-sub {
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 45px;
+    left: 0;
+    display: none;
+    z-index: 8;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.wrapper,
+html,
+body {
+    height: 100%;
+}
