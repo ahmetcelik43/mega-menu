@@ -11,9 +11,9 @@ $(document).ready(function() {
     });
 
     $('.menu-item.has-sub').mouseover(function() {
-        $('.overlay').fadeIn('fast');
+        $('.overlay').show();
     }).mouseleave(function() {
-        $('.overlay').fadeOut("fast")
+        $('.overlay').hide();
     });
 
 });
